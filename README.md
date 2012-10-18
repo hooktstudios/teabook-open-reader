@@ -106,3 +106,35 @@ be able to analyse and prepare books for viewing on the reader.
 
 Ruby-dependent code is indicated in the source code. The CoffeeScript section
 just requires a browser once compiled in JavaScript.
+
+Database uses MongoDB with Mongoid mapper.
+
+Getting started
+------------
+
+Update your gems with bundle
+
+    $ bundle install
+
+Create & set MongoDB configuration (config/mongoid.yml)
+
+    $ bundle exec rails g mongoid:config
+
+Set a secret token for you application (copy & edit initializer template)
+
+    $ cp config/initializers/secret_token.rb.dist config/initializers/secret_token.rb
+
+Start you application
+
+     $ bundle exec rails s
+
+Running the tests
+-----------------
+
+Tests are made with RSpec. Run tests with Guard :
+
+    $ bundle exec guard
+
+Or run them once :
+
+    $ bundle exec rake spec
